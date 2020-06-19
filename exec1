@@ -1,0 +1,30 @@
+struct Player{
+   var name:String
+   var highScore: Int = 0;
+   var history: [Int] = []
+   
+   
+   
+   init(_ name: String){
+      self.name = name
+   }
+
+}
+
+var playser = Player("Tomas")
+
+
+extension Player{
+   mutating func updateScore(_ newScore: Int){
+      history.append(newScore)
+      
+      if highScore < newScore {
+          print("\(newScore) Anew hign score for \(name)!")
+          
+          hifgScore = newScore
+      }
+   
+   }
+}
+
+player.updateScore(50);
